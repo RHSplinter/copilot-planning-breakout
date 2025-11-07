@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="mobile-web-app-capable" content="yes">
+    <title>Breakout Game</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            font-family: 'Arial', sans-serif;
+            overflow: hidden;
+        }
+        
+        #game-container {
+            box-shadow: 0 10px 50px rgba(0, 0, 0, 0.3);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        
+        canvas {
+            display: block;
+            image-rendering: crisp-edges;
+            image-rendering: pixelated;
+        }
+    </style>
+</head>
+<body>
+    <div id="game-container"></div>
+    
+    <!-- Phaser 3 CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/phaser@3.70.0/dist/phaser.min.js"></script>
+    
+    <!-- Game modules -->
+    <script src="src/state.js"></script>
+    <script src="src/persistence.js"></script>
+    <script src="src/levels.js"></script>
+    <script src="src/proceduralGenerator.js"></script>
+    <script src="src/adaptiveDifficulty.js"></script>
+    <script src="src/scenes/BootScene.js"></script>
+    <script src="src/scenes/MainMenuScene.js"></script>
+    <script src="src/scenes/GameScene.js"></script>
+    <script src="src/scenes/PauseScene.js"></script>
+    <script src="src/scenes/GameOverScene.js"></script>
+    <script src="src/game.js"></script>
+</body>
+</html>
